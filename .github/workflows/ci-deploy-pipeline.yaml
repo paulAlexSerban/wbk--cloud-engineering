@@ -25,7 +25,6 @@ jobs:
   build-job:
     name: JOB -- Build Job
     runs-on: ubuntu-latest
-    needs: test_job
     steps:
       - name: STEP -- Checkout repository
         uses: actions/checkout@v5
