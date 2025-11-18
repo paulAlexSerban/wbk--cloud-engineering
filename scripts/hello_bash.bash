@@ -1,0 +1,1 @@
+ecoh "Hello, Bash Script!"

@@ -17,3 +17,6 @@ jobs:
         run: |
           node -v
           npm -v
+          python3 --version
+          pip3 --version
+          echo "All commands executed successfully."
