@@ -57,5 +57,3 @@ jobs:
           echo ${{ format( 'Hello {0} {1} {2}', 'World', '!', ':D' ) }}
           echo ${{ hashFiles( '**/*.yml' ) }}
           echo ${{ join( fromJson( '["one","two","three"]' ), ', ' ) }}
-          echo ${{ toJson( fromJson( '{"name":"GitHub","type":"Actions"}' ) ) }}
-          echo ${{ fromJson( '{"name":"GitHub","type":"Actions"}' ).name }}
