@@ -1,0 +1,19 @@
+@import "../../abstracts/abstracts.scss";
+
+/* critical:start */
+body {
+  @include flex($direction: column);
+
+  background-color: var(--color-page-background);
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+
+  > * {
+    width: 100%;
+  }
+}
+
+/* critical:end */

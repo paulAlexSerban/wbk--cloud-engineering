@@ -1,0 +1,123 @@
+@import "../../tools/functions/functions.scss";
+@import "./sizes.scss";
+
+$page-heading: (
+  default: (
+    font-family: var(--text-regular),
+    font-size: convert-rem(30px),
+    line-height: convert-rem(34px),
+    font-weight: 300,
+    text-align: center,
+    letter-spacing: convert-rem(-1.5px),
+    color: var(--color-text),
+  )
+);
+
+$articleHeading: (
+  default: (
+    font-family: var(--text-regular),
+    font-size: convert-rem(24px),
+    line-height: convert-rem(28px),
+    font-weight: 300,
+    text-align: left,
+    letter-spacing: convert-rem(-.5px),
+    color: var(--color-text),
+  )
+);
+
+$sectionHeading: (
+  default: (
+    font-family: var(--text-regular),
+    font-size: convert-rem(20px),
+    line-height: convert-rem(24px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: 0,
+    color: var(--color-text),
+  )
+);
+
+$body: (
+  default: (
+    color: var(--color-text),
+    font-family: var(--text-regular),
+    font-size: convert-rem(16px),
+    line-height: convert-rem(18px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: convert-rem(.5px),
+  )
+);
+
+$button: (
+  default: (
+    color: var(--color-button-label),
+    font-family: var(--text-regular),
+    font-size: convert-rem(16px),
+    line-height: convert-rem(18px),
+    font-weight: 500,
+    text-align: left,
+    letter-spacing: convert-rem(1.25px),
+    text-transform: uppercase,
+  )
+);
+
+$link: (
+  default: (
+    color: var(--color-link),
+    font-family: var(--text-regular),
+    font-size: convert-rem(16px),
+    line-height: convert-rem(18px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: convert-rem(.5px),
+  )
+);
+
+$label: (
+  default: (
+    color: var(--color-text),
+    font-family: var(--text-regular),
+    font-size: convert-rem(16px),
+    line-height: convert-rem(18px),
+    font-weight: 400,
+    text-align: left,
+    letter-spacing: convert-rem(.5px),
+  )
+);
+
+$input: (
+  default: (
+    color: var(--color-text),
+    font-family: var(--text-regular),
+    font-size: convert-rem(16px),
+    line-height: convert-rem(18px),
+    font-weight: 400,
+    text-align: left,
+    letter-spacing: convert-rem(.5px),
+  )
+);
+
+$input-message: (
+  default: (
+    color: var(--color-text),
+    font-family: var(--text-regular),
+    font-size: convert-rem(14px),
+    line-height: convert-rem(16px),
+    font-weight: 300,
+    text-align: left,
+    letter-spacing: convert-rem(.5px),
+  )
+);
+
+$select: (
+  default: (
+    color: var(--color-text),
+    font-family: var(--text-regular),
+    font-size: convert-rem(14px),
+    line-height: convert-rem(16px),
+    font-weight: 400,
+    text-align: left,
+    letter-spacing: convert-rem(.5px),
+  )
+);

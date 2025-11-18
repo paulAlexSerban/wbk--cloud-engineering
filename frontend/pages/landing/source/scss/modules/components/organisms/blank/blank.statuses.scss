@@ -1,0 +1,11 @@
+$type: "o";
+$block: "#{$type}-blank";
+
+.#{$block} {
+  @include e("base") {
+    &:hover {
+      cursor: pointer;
+      color: coral;
+    }
+  }
+}

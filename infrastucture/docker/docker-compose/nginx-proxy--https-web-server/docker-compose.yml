@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  nginx:
+    build:
+      context: ../backend/proxy/
+      dockerfile: proxy.Dockerfile
+    restart: always
+    container_name: nginx-proxy
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web
+  web:
+    build:
+      context: ../backend/httpd/
+      dockerfile: httpd.Dockerfile
+    container_name: httpd-web-server
+    restart: always
+    volumes:
+      - ../docs:/usr/local/apache2/htdocs/

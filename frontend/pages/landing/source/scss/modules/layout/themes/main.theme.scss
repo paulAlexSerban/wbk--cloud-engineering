@@ -1,0 +1,17 @@
+@import "../../../abstracts/abstracts.scss";
+
+/* critical:start */
+:root {
+  --color-text: #{$c-eerie-black};
+  --color-page-background: #{$c-white};
+  --color-button-label: #{$c-white};
+  --color-select-background: #{$c-white};
+  --color-container-background: #{$c-cultured};
+  --color-link: #{$c-indigo-blue};
+  --color-button-primary: #{$c-carolina-blue};
+  --shadow-container: #{$shadow-container};
+  --text-regular: #{$fontFam-openSans}; /* regular font family */
+  --text-code: #{$fontFam-courierPrime}; /* code family */
+}
+
+/* critical:end */

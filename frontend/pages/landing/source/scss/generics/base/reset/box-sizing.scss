@@ -1,0 +1,24 @@
+/**
+* Make all elements from DOM inherit from parent box-sizing
+* Since `*` has a specificity of 0, it does not override the `html` value making all elements inheriting
+* from the root box-sizing value
+
+* 1. Remove browser margin and padding
+* 2. Change the box model so border and paddings are not added to the total width of the box container
+* 3. Setup the box model on the root level
+*/
+
+/* critical:start */
+*,
+*::before,
+*::after {
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+  box-sizing: border-box; /* 2 */
+}
+
+html {
+  box-sizing: border-box; /* 3 */
+}
+
+/* critical:end */

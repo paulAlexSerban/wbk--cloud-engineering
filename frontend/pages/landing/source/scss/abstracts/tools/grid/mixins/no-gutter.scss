@@ -1,0 +1,31 @@
+/// Add `no-gutter` and `no-gutter--{start,end}` classes to the output CSS. These
+/// classes are useful for dropping the gutter in fluid situations.
+/// @access private
+@mixin no-gutter {
+  .no-gutter,
+  .row.no-gutter [class*="col"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .no-gutter--start,
+  .row.no-gutter--start [class*="col"] {
+    padding-left: 0;
+  }
+
+  .no-gutter--end,
+  .row.no-gutter--end [class*="col"] {
+    padding-right: 0;
+  }
+
+  // Deprecated ☠️
+  .no-gutter--left,
+  .row.no-gutter--left [class*="col"] {
+    padding-left: 0;
+  }
+
+  .no-gutter--right,
+  .row.no-gutter--right [class*="col"] {
+    padding-right: 0;
+  }
+}

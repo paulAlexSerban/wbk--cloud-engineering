@@ -1,0 +1,8 @@
+/// Gutter size in rem
+/// @type Number
+$grid-gutter: convert-rem(32px);
+
+
+/// Condensed gutter size in rem
+/// @type Number
+$grid-gutter--condensed: convert-rem(1px);

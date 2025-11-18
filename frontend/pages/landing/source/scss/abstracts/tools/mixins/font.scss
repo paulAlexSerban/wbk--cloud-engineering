@@ -1,0 +1,20 @@
+@use "sass:map";
+
+@mixin iterateObject($list) {
+  @each $key, $value in $list {
+    #{$key}: $value;
+  }
+}
+
+@mixin font($font-definition) {
+  @each $viewport, $rules in $font-definition {
+    $map: map.get($font-definition, $viewport);
+    @if $viewport == "default" {
+      @include iterateObject($map);
+    } @else {
+      @include viewport($viewport) {
+        @include iterateObject($map);
+      }
+    }
+  }
+}

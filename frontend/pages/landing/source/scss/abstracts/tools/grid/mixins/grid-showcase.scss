@@ -1,0 +1,8 @@
+@mixin grid-showcase() {
+  .grid,
+  .row,
+  [class*="col"] {
+    min-height: convert-rem(100px);
+    border: 2px solid #00a6ff;
+  }
+}

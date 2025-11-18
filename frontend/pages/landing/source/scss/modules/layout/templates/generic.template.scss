@@ -1,0 +1,18 @@
+// ATOMS
+
+// MOLECULES
+
+// ORGANISMS
+@import "../../components/organisms/blank/blank.organism.scss";
+
+// TYPES (Normal Emphasized Informative Warning Alert Error Success)
+@import "../../components/organisms/blank/blank.types.scss";
+
+// STATES (states of interactive elements)
+// :default, ::placeholder, :placeholder-shown, :blank, :indeterminate, :checked, :optional,
+// :required, :disabled, :enabled, :read-write, :read-only, :valid, :invalid, :in-range, :out-of-range
+@import "../../components/organisms/blank/blank.states.scss";
+
+// STATUSES
+// ::selection, :hover, -webkit-tap-highlight-color, :focus, :focus-within, :active, :link, :visited
+@import "../../components/organisms/blank/blank.statuses.scss";

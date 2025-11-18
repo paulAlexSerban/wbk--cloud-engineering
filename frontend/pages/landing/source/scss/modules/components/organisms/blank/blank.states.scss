@@ -1,0 +1,10 @@
+$type: "o";
+$block: "#{$type}-blank";
+
+.#{$block} {
+  @include e("base") {
+    &:disabled {
+      color: #ff0000;
+    }
+  }
+}

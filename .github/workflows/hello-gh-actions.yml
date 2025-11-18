@@ -2,21 +2,60 @@ name: Hello GitHub Actions
 on: [workflow_dispatch]
 jobs:
   hello_world:
-    name: JOB -- Hello World 
+    name: JOB -- Hello World
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
+      - name: STEP -- Say Hello
         run: echo "Hello, GitHub Actions!"
-      - name: Show current date and time
+      - name: STEP -- Show current date and time
         run: date
-      - name: List files in the repository
+      - name: STEP -- List files in the repository
         run: ls -la
-      - name: Display GitHub context
-        run: echo "${{ toJson(github) }}"
-      - name: multiline script
+      - name: STEP -- Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
+      - name: STEP -- Dump job context
+        run: echo '${{ toJSON(job) }}'
+      - name: STEP -- Dump steps context
+        run: echo '${{ toJSON(steps) }}'
+      - name: STEP -- Dump runner context
+        run: echo '${{ toJSON(runner) }}'
+      - name: STEP -- Dump strategy context
+        run: echo '${{ toJSON(strategy) }}'
+      - name: STEP -- Dump matrix context
+        run: echo '${{ toJSON(matrix) }}'
+      - name: STEP -- multiline script
         run: |
           node -v
           npm -v
           python3 --version
           pip3 --version
           echo "All commands executed successfully."
+  log-env:
+    name: JOB -- Log ENVIRONMENT Variables
+    runs-on: ubuntu-latest
+    env:
+      JOBS_ENV: variable available to all steps in log-env job
+    steps:
+      - name: STEP -- Log ENVIRONMENT Variables
+        env:
+          STEP_ENV: variable available to this specific step
+        run: |
+          echo "WORKFLOW_ENV: ${WORKFLOW_ENV}"
+          echo "JOBS_ENV: ${JOBS_ENV}"
+          echo "STEP_ENV: ${STEP_ENV}"
+
+  github-actions-functions:
+    name: JOB -- GitHub Actions Functions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Function testing
+        run: |
+          echo ${{ contains( 'hello', 'll' ) }}
+          echo ${{ startsWith( 'hello', 'he' ) }}
+          echo ${{ endsWith( 'hello', 'lo' ) }}
+          echo ${{ format( 'Hello {0} {1} {2}', 'World', '!', ':D' ) }}
+          echo ${{ hashFiles( '**/*.yml' ) }}
+          echo ${{ join( fromJson( '["one","two","three"]' ), ', ' ) }}
+          echo ${{ toJson( fromJson( '{"name":"GitHub","type":"Actions"}' ) ) }}
+          echo ${{ fromJson( '{"name":"GitHub","type":"Actions"}' ).name }}

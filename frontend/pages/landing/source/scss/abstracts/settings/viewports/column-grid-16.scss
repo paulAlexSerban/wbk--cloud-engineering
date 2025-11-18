@@ -1,0 +1,29 @@
+@import "../../tools/functions/functions.scss";
+// Initial map of our breakpoints and their values
+/// @type Map
+$column-grid-16: (
+  smartphone: (
+    columns: 4,
+    margin: 0,
+    width: convert-rem($mobile-xxs),
+    touch: true
+  ),
+  tablet: (
+    columns: 16,
+    margin: convert-rem(16px),
+    width: convert-rem($mobile),
+    touch: true
+  ),
+  desktop: (
+    columns: 16,
+    margin: convert-rem(16px),
+    width: convert-rem($mobile),
+    touch: false
+  ),
+  desktop-large: (
+    columns: 16,
+    margin: convert-rem(16px),
+    width: convert-rem($tablet),
+    touch: false
+  )
+) ;

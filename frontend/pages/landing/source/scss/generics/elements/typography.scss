@@ -1,0 +1,30 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+/* critical:start */
+
+// h1 {
+//   @include font($page-heading);
+// }
+
+h2 {
+  @include font($articleHeading);
+}
+
+// h3 {
+//   @include font($sectionHeading)
+// }
+
+label {
+  @include font($label);
+}
+
+// a {
+//   @include font($link);
+// }
+
+p,span {
+  @include font($body);
+}
+
+/* critical:end */
+/* stylelint-enable selector-no-qualifying-type */

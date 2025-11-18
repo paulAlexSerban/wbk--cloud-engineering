@@ -1,0 +1,40 @@
+/// Generate a media query from the width of the given breakpoint to infinity
+/// @content
+/// @access public
+
+@mixin breakpoint-touch($name, $breakpoints: $breakpoints) {
+  @if type-of($name) == "number" {
+    @media only screen and (min-width: $name), only screen and (hover: none) {
+      @content;
+    }
+  } @else if map-has-key($breakpoints, $name) {
+    $breakpoint: map.get($breakpoints, $name);
+    $hasTouch: map.get($breakpoint, touch);
+
+    @if $hasTouch {
+      $width: map.get($breakpoint, width);
+      @if is-smallest-breakpoint($name, $breakpoints) {
+        @media only screen and (hover: none) {
+          @content;
+        }
+      } @else {
+        @media only screen and (min-width: $width),
+          only screen and (hover: none) {
+          @content;
+        }
+      }
+    } @else {
+      @error "Unable to find a touch breakpoint with name `#{$name}`. Expected one of: (#{map-keys($breakpoints)})";
+    }
+  } @else {
+    @error "Unable to find a breakpoint with name `#{$name}`. Expected one of: (#{map-keys($breakpoints)})";
+  }
+}
+
+/*
+.example {
+  @include breakpoint-touch(tablet-large) {
+    color:red;
+  }
+}
+*/

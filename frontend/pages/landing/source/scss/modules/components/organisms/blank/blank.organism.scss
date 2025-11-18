@@ -1,0 +1,12 @@
+$type: "o";
+$block: "#{$type}-blank";
+
+.#{$block} {
+  @include e("base") {
+    @include font($body);
+  }
+
+  @include e("title") {
+    text-align: center;
+  }
+}

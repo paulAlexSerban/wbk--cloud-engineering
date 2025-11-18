@@ -1,0 +1,15 @@
+/// Default font size
+/// @type Number
+/// @access public
+$default-font-size: 16px ;
+
+/// Project's design system sizes
+/// @type Number
+/// @param {Size} $baseline - horizontal base spacing value
+/// @param {Size} $gutter - vertical base spacing value
+$baseline: convert-rem(8px);
+$gutter: convert-rem(16px);
+
+/// Container's maximum width
+/// @type Length
+$max-width: convert-rem(1440px) ;

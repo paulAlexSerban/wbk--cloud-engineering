@@ -1,0 +1,8 @@
+/**
+  * Render the `main` element consistently in IE.
+/* critical:start */
+main {
+  display: block;
+}
+
+/* critical:end */
