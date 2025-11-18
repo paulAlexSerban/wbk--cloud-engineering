@@ -12,3 +12,7 @@ jobs:
         run: ls -la
       - name: Display GitHub context
         run: echo "${{ toJson(github) }}"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
