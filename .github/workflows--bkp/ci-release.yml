@@ -1,0 +1,51 @@
+name: Release
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Use NodeJS v14.18.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.18.1
+
+      - name: Install
+        run: npm run install:dependencies:ci
+
+      - name: Build
+        run: |
+          npm run build:all:prod
+          npm run deploy
+
+      - name: Upload /docs artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: docs
+          path: docs
+
+      - name: Zip Artifacts
+        run: |
+          zip -r build.zip ./docs
+
+      - name: Create Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: docs

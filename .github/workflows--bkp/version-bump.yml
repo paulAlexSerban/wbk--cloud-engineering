@@ -1,0 +1,62 @@
+# Semantic versioning CI script developed for learning purposes
+
+# name: Bump Version
+
+# on: 
+#   pull_request:
+#     types: [closed]
+
+# jobs:
+#   patch-version:
+#     name: 'Bump Patch Version'
+#     if: "contains(github.event.pull_request.head.ref, 'PATCH')"
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: 'Checkout source code'
+#         uses: 'actions/checkout@v2'
+#         with:
+#           ref: ${{ github.ref }}
+#           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+#       - run: git config --global user.name 'paulAlexSerban'
+#       - run: git config --global user.email 'paul.alex.serban@gmail.com'
+#       - run: npm version patch -m "[PATCH] bump to %s"
+#       - run: git push
+#       - name: 'cat package.json'
+#         run: cat ./package.json
+  
+#   minor-version:
+#     name: 'Bump Minor Version'
+#     if: "contains(github.event.pull_request.head.ref, 'MINOR')"
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: 'Checkout source code'
+#         uses: 'actions/checkout@v2'
+#         with:
+#           ref: ${{ github.ref }}
+#           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+#       - run: git config --global user.name 'paulAlexSerban'
+#       - run: git config --global user.email 'paul.alex.serban@gmail.com'
+#       - run: npm version minor -m "[MINOR] bump to %s"
+#       - run: git push
+#       - name: 'cat package.json'
+#         run: cat ./package.json
+
+#   major-version:
+#     name: 'Bump Major Version'
+#     if: "contains(github.event.pull_request.head.ref, 'MAJOR')"
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: 'Checkout source code'
+#         uses: 'actions/checkout@v2'
+#         with:
+#           ref: ${{ github.ref }}
+#           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+#       - run: git config --global user.name 'paulAlexSerban'
+#       - run: git config --global user.email 'paul.alex.serban@gmail.com'
+#       - run: npm version major -m "[MAJOR] bump to %s"
+#       - run: git push
+#       - name: 'cat package.json'
+#         run: cat ./package.json

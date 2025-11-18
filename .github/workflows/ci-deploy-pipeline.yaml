@@ -1,8 +1,8 @@
 name: WORKFLOW -- CI Deploy Pipeline
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   test_job:
-    name: JOB -- CI Test Job
+    name: JOB -- Test Job
     runs-on: ubuntu-latest
     steps:
       - name: STEP -- Checkout repository
