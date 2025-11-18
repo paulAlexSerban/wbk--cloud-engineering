@@ -1,5 +1,11 @@
 name: WORKFLOW -- CI Deploy Pipeline
-on: [push, workflow_dispatch]
+on:
+  pull_request:
+    types: [opened, edited]
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 jobs:
   test_job:
     name: JOB -- Test Job
