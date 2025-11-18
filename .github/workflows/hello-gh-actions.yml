@@ -2,6 +2,7 @@ name: Hello GitHub Actions
 on: [workflow_dispatch]
 jobs:
   hello_world:
+    name: JOB -- Hello World 
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
