@@ -1,0 +1,8 @@
+{
+  "note_id": { "S": "note_5984" },
+  "title": { "S": "title from json file" },
+  "user_id": { "S": "json_user_1" },
+  "content": { "S": "this is a note from json file" },
+  "timestamp": { "N": "1740500000" },
+  "cat": { "S": "cat_4 from json" }
+}

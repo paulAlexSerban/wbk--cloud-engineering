@@ -1,0 +1,222 @@
+{
+  "Items": [
+    {
+      "title": { "S": "Hello, World" },
+      "user_id": { "S": "1" },
+      "content": { "S": "Hello, world from the cloud!" },
+      "timestamp": { "N": "1740641233" }
+    },
+    {
+      "title": { "S": "Hello, from user 4" },
+      "user_id": { "S": "4" },
+      "content": { "S": "Hello, world from the cloud from user 4!" },
+      "timestamp": { "N": "1740642563" }
+    },
+    {
+      "title": { "S": "Hello, from user 3" },
+      "user_id": { "S": "3" },
+      "content": { "S": "Hello, world from the cloud from user 3!" },
+      "timestamp": { "N": "1740643453" }
+    },
+    {
+      "user_id": { "S": "user_2" },
+      "content": { "S": "content_1_updated" },
+      "timestamp": { "N": "1620000000" }
+    },
+    {
+      "note_id": { "S": "note_857" },
+      "title": { "S": "title_excepteur irure et nostrud in" },
+      "user_id": { "S": "user_3" },
+      "content": {
+        "S": "content_sit aliquip consectetur consequat nulla labore qui in voluptate in"
+      },
+      "timestamp": { "N": "1740641116" },
+      "cat": { "S": "cat_1" }
+    },
+    {
+      "note_id": { "S": "note_4916" },
+      "title": { "S": "title_occaecat ut elit irure ipsum" },
+      "user_id": { "S": "user_3" },
+      "content": {
+        "S": "content_excepteur cillum amet enim consequat eu culpa dolor sed pariatur"
+      },
+      "timestamp": { "N": "1740641117" },
+      "cat": { "S": "cat_1" }
+    },
+    {
+      "note_id": { "S": "note_5984" },
+      "title": {
+        "S": "updated title HUGE TITLE"
+      },
+      "user_id": {
+        "S": "json_user_1"
+      },
+      "content": {
+        "S": "this is a note from json file"
+      },
+      "cat": {
+        "S": "cat_4 from json"
+      },
+      "timestamp": {
+        "N": "1740500000"
+      }
+    },
+    {
+      "note_id": {
+        "S": "note_4922"
+      },
+      "title": {
+        "S": "title_non lorem culpa in occaecat"
+      },
+      "user_id": {
+        "S": "user_8"
+      },
+      "content": {
+        "S": "content_proident voluptate et eiusmod veniam excepteur laboris ut esse culpa"
+      },
+      "timestamp": {
+        "N": "1740641117"
+      },
+      "cat": {
+        "S": "cat_1"
+      }
+    },
+    {
+      "note_id": {
+        "S": "note_9995"
+      },
+      "title": {
+        "S": "title_aliquip ipsum officia duis aliqua"
+      },
+      "user_id": {
+        "S": "user_4"
+      },
+      "content": {
+        "S": "content_labore ut ex consectetur et nulla adipiscing dolore pariatur est"
+      },
+      "timestamp": {
+        "N": "1740641116"
+      },
+      "cat": {
+        "S": "cat_2"
+      }
+    },
+    {
+      "note_id": {
+        "S": "note_5521"
+      },
+      "title": {
+        "S": "title_eiusmod esse aliquip commodo ipsum"
+      },
+      "user_id": {
+        "S": "user_7"
+      },
+      "content": {
+        "S": "content_irure sed ex ad occaecat dolor sint incididunt nulla consequat"
+      },
+      "timestamp": {
+        "N": "1740641113"
+      },
+      "cat": {
+        "S": "cat_5"
+      }
+    },
+    {
+      "note_id": {
+        "S": "note_3220"
+      },
+      "title": {
+        "S": "title_sint est cillum labore dolore"
+      },
+      "user_id": {
+        "S": "user_7"
+      },
+      "content": {
+        "S": "content_adipiscing sunt ad deserunt duis pariatur sint anim laborum reprehenderit"
+      },
+      "timestamp": {
+        "N": "1740641114"
+      },
+      "cat": {
+        "S": "cat_5"
+      }
+    },
+    {
+      "note_id": {
+        "S": "note_7280"
+      },
+      "title": {
+        "S": "title_ut quis deserunt in amet"
+      },
+      "user_id": {
+        "S": "user_7"
+      },
+      "content": {
+        "S": "content_quis deserunt et officia nulla consectetur nostrud cillum qui laborum"
+      },
+      "timestamp": {
+        "N": "1740641115"
+      },
+      "cat": {
+        "S": "cat_5"
+      }
+    },
+    {
+      "note_id": {
+        "S": "note_7275"
+      },
+      "title": {
+        "S": "title_enim id sunt cupidatat aute"
+      },
+      "user_id": {
+        "S": "user_1"
+      },
+      "content": {
+        "S": "content_do non ipsum consequat aute ut qui excepteur ex dolor"
+      },
+      "timestamp": {
+        "N": "1740641115"
+      },
+      "cat": {
+        "S": "cat_1"
+      }
+    },
+    {
+      "title": {
+        "S": "Hello, from user 2"
+      },
+      "user_id": {
+        "S": "2"
+      },
+      "content": {
+        "S": "Hello, world from the cloud from user 2!"
+      },
+      "timestamp": {
+        "N": "1740643213"
+      }
+    },
+    {
+      "note_id": {
+        "S": "note_7637"
+      },
+      "title": {
+        "S": "title_laboris cillum elit commodo ipsum"
+      },
+      "user_id": {
+        "S": "user_6"
+      },
+      "content": {
+        "S": "content_anim nisi tempor laborum sint incididunt sit ad proident in"
+      },
+      "timestamp": {
+        "N": "1740641118"
+      },
+      "cat": {
+        "S": "cat_4"
+      }
+    }
+  ],
+  "Count": 15,
+  "ScannedCount": 15,
+  "ConsumedCapacity": null
+}

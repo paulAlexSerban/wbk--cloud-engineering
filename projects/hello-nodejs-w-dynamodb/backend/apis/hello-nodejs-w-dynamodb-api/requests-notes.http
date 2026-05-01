@@ -1,0 +1,34 @@
+@base_url = http://localhost:3000
+
+###
+GET {{base_url}}/api/notes
+Content-Type: application/json
+
+### get note by id
+GET {{base_url}}/api/notes/note_5045
+Content-Type: application/json
+
+###
+POST {{base_url}}/api/notes
+Content-Type: application/json
+
+{
+  "user_id": "user_1234-post",
+  "title": "Note Title",
+  "content": "Note Content",
+  "cat": "Note Category"
+}
+
+###
+PATCH {{base_url}}/api/notes/29e09ff8-7fd4-44fb-b70c-f1d28d51b278
+Content-Type: application/json
+
+{
+  "user_id": "user_2",
+  "cat": "just category",
+  "timestamp": 1741096578
+}
+
+### delete a note by timestamp
+DELETE {{base_url}}/api/notes/1741096610?user_id=user_1234-post
+Content-Type: application/json

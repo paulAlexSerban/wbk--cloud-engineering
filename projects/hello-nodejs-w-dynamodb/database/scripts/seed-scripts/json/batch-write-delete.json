@@ -1,0 +1,52 @@
+{
+  "td_notes": [
+    {
+      "PutRequest": {
+        "Item": {
+          "user_id": { "S": "1" },
+          "timestamp": { "S": "1740641233" },
+          "title": { "S": "Hello, World" },
+          "content": { "S": "Hello, world from the cloud!" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "user_id": { "S": "2" },
+          "timestamp": { "S": "1740643213" },
+          "title": { "S": "Hello, from user 2" },
+          "content": { "S": "Hello, world from the cloud from user 2!" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "user_id": { "S": "3" },
+          "timestamp": { "S": "1740643453" },
+          "title": { "S": "Hello, from user 3" },
+          "content": { "S": "Hello, world from the cloud from user 3!" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "user_id": { "S": "4" },
+          "timestamp": { "S": "1740642563" },
+          "title": { "S": "Hello, from user 4" },
+          "content": { "S": "Hello, world from the cloud from user 4!" }
+        }
+      }
+    },
+    {
+      "DeleteRequest": {
+        "Key": {
+          "user_id": { "S": "1" },
+          "timestamp": { "S": "1740641233" }
+        }
+      }
+    }
+  ]
+}

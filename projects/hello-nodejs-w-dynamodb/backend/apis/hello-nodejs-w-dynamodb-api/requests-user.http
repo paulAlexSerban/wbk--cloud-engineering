@@ -1,0 +1,17 @@
+@base_url = http://localhost:3000
+
+### get first 10 notes of user_1234-post
+GET {{base_url}}/api/user/user_1234-post
+Content-Type: application/json
+
+### get paginated response of notes
+GET {{base_url}}/api/user/user_1234-post?startTimeStamp=1741097178&
+Content-Type: application/json
+
+### get paginated response of notes with limit
+GET {{base_url}}/api/user/user_1234-post?startTimeStamp=1741097178&limit=2
+Content-Type: application/json
+
+### get first 20 notes of user_1234-post
+GET {{base_url}}/api/user/user_1234-post?limit=20
+Content-Type: application/json

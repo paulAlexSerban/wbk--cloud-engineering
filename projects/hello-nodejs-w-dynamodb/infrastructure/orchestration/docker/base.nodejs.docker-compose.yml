@@ -1,0 +1,53 @@
+---
+networks:
+  base-nodejs-network:
+    driver: bridge
+
+volumes:
+  dev-db-data:
+
+services:
+  # ---------------------------------------------------------------------
+  # | Node.js API Service                                               |
+  # ---------------------------------------------------------------------
+  nodejs-api-service:
+    build:
+      context: ../../../
+      dockerfile: .${API_PROJECT_PATH}/Dockerfile.dev
+      args:
+        - API_PROJECT_PATH=${API_PROJECT_PATH}
+        - NODE_PORT=${NODE_PORT}
+    ports:
+      - "3000:${NODE_PORT}"
+    env_file:
+      - ../../configuration/env/.${PROJECT_NAME}.compose.env
+    volumes:
+      - /usr/src/app/node_modules # Avoids overwriting node_modules with local volume
+      - ../../../${API_PROJECT_PATH}:/usr/src/app
+    networks:
+      - base-nodejs-network
+
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    ports:
+      - "4566:4566" # LocalStack Gateway
+      - "4510-4559:4510-4559" # Additional service ports
+    env_file:
+      - ../../configuration/env/.${PROJECT_NAME}.compose.env
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock" # Required for running dynamodbs in containers
+      - "../../configuration/scripts/localstack/dynamodb.init-aws.sh:/etc/localstack/init/ready.d/init-aws.sh" # Auto-create resources
+    networks:
+      - base-nodejs-network
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin
+    container_name: dynamodb-admin
+    ports:
+      - "8001:8001"
+    env_file:
+      - ../../configuration/env/.${PROJECT_NAME}.compose.env
+    depends_on:
+      - localstack
+    networks:
+      - base-nodejs-network
